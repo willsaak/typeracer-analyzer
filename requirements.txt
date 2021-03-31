@@ -1,0 +1,9 @@
+phantomjs
+selenium
+bs4
+requests
+lxml
+wget
+tqdm
+pandas
+matplotlib
