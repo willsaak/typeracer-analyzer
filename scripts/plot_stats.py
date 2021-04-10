@@ -1,11 +1,14 @@
-from scraper import Scraper
-from data_converter import DataConverter
+from scrapers.userdata import UserDataScraper
+from utils.data_converter import DataConverter
 
 
 def main():
-    extracted_data = Scraper(username='username').get_data()
+    print('Getting data...')
+    extracted_data = UserDataScraper(username='hinkalus').get_data()
+    print('Converting to pandas df...')
     converter = DataConverter(*extracted_data)
     preprocessed_data = converter.get_data()
+    print('Plotting...')
     converter.plot()
 
 
